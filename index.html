@@ -1,163 +1,278 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Shreya ❤️</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<title>For Shreya 💖</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{height:100%;scroll-behavior:smooth}
 
-    body {
-      font-family: 'Poppins', sans-serif;
-      background: linear-gradient(135deg, #ffd6e0, #fbc2eb);
-      min-height: 100vh;
-      overflow-x: hidden;
-      color: #2b2b2b;
-    }
+body{
+  font-family:'Poppins',sans-serif;
+  background:linear-gradient(120deg,#fbc2eb,#a6c1ee,#fbc2eb);
+  background-size:300% 300%;
+  animation:bg 12s ease infinite;
+  color:white;
+  overflow:hidden;
+}
 
-    section {
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-      text-align: center;
-      padding: 40px 20px;
-    }
+@keyframes bg{
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
 
-    h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: 3.2rem;
-      margin-bottom: 15px;
-      animation: fadeUp 1.5s ease forwards;
-    }
+.container{
+  height:100vh;
+  overflow-y:scroll;
+  scroll-snap-type:y mandatory;
+}
 
-    h2 {
-      font-family: 'Playfair Display', serif;
-      font-size: 2.2rem;
-      margin-bottom: 20px;
-    }
+section{
+  min-height:100vh;
+  scroll-snap-align:start;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  padding:40px 20px;
+  position:relative;
+}
 
-    p {
-      font-size: 1.1rem;
-      max-width: 650px;
-      line-height: 1.8;
-      opacity: 0;
-      animation: fadeUp 1.8s ease forwards;
-      animation-delay: .4s;
-    }
+h1,h2{
+  font-family:'Playfair Display',serif;
+  text-shadow:0 10px 30px rgba(0,0,0,.35);
+}
 
-    .heart {
-      font-size: 3.5rem;
-      margin: 20px 0;
-      animation: heartbeat 1.2s infinite;
-    }
+h1{font-size:3.8rem}
+h2{font-size:2.4rem;margin-bottom:20px}
 
-    .scroll {
-      margin-top: 30px;
-      font-size: .9rem;
-      opacity: .7;
-    }
+p{
+  font-size:1.15rem;
+  max-width:720px;
+  line-height:1.9;
+  opacity:.95;
+}
 
-    .card {
-      background: rgba(255, 255, 255, 0.65);
-      backdrop-filter: blur(8px);
-      padding: 25px;
-      border-radius: 20px;
-      box-shadow: 0 15px 40px rgba(0,0,0,.1);
-      margin: 15px;
-      max-width: 320px;
-      animation: fadeUp 1.5s ease forwards;
-    }
+.heart{
+  font-size:4rem;
+  margin:20px 0;
+  animation:pulse 1.4s infinite;
+  filter:drop-shadow(0 0 20px rgba(255,255,255,.8));
+}
 
-    .cards {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-    }
+@keyframes pulse{
+  0%,100%{transform:scale(1)}
+  50%{transform:scale(1.3)}
+}
 
-    footer {
-      padding: 30px 10px;
-      text-align: center;
-      font-size: .9rem;
-      opacity: .8;
-    }
+/* Cards */
+.cards{
+  display:flex;
+  gap:22px;
+  flex-wrap:wrap;
+  justify-content:center;
+}
 
-    /* Animations */
-    @keyframes fadeUp {
-      from {
-        opacity: 0;
-        transform: translateY(30px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
+.card{
+  background:rgba(255,255,255,.2);
+  backdrop-filter:blur(14px);
+  border-radius:24px;
+  padding:28px;
+  max-width:300px;
+  box-shadow:0 25px 60px rgba(0,0,0,.3);
+  transition:.4s;
+}
+.card:hover{transform:translateY(-15px) scale(1.05)}
 
-    @keyframes heartbeat {
-      0%, 100% { transform: scale(1); }
-      50% { transform: scale(1.25); }
-    }
-  </style>
+button{
+  margin-top:30px;
+  padding:14px 36px;
+  border:none;
+  border-radius:40px;
+  background:rgba(255,255,255,.25);
+  color:white;
+  font-size:1rem;
+  backdrop-filter:blur(10px);
+  cursor:pointer;
+  transition:.4s;
+}
+button:hover{transform:scale(1.1)}
+
+/* Love Letter */
+.letter{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.6);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  backdrop-filter:blur(8px);
+  opacity:0;
+  pointer-events:none;
+  transition:.6s;
+  z-index:10;
+}
+
+.letter.open{
+  opacity:1;
+  pointer-events:auto;
+}
+
+.letter-box{
+  background:rgba(255,255,255,.2);
+  padding:40px;
+  border-radius:30px;
+  max-width:500px;
+  text-align:center;
+  box-shadow:0 30px 80px rgba(0,0,0,.4);
+}
+
+.letter-box h2{margin-bottom:15px}
+.close{margin-top:20px;font-size:.9rem;opacity:.8}
+
+/* Floating Hearts */
+.float{
+  position:absolute;
+  bottom:-10vh;
+  font-size:20px;
+  opacity:.4;
+  animation:floatUp linear infinite;
+}
+
+@keyframes floatUp{
+  from{transform:translateY(0)}
+  to{transform:translateY(-120vh)}
+}
+
+/* Fireworks canvas */
+canvas{
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  z-index:20;
+}
+</style>
 </head>
 
 <body>
 
-  <!-- Section 1 -->
-  <section>
-    <h1>Shreya ✨</h1>
-    <div class="heart">❤️</div>
+<canvas id="fireworks"></canvas>
+
+<div class="container">
+
+<section>
+  <h1>Shreya ✨</h1>
+  <div class="heart">❤️</div>
+  <p>This page exists because someone incredibly special exists.</p>
+</section>
+
+<section>
+  <h2>About You</h2>
+  <div class="cards">
+    <div class="card">Your smile feels like calm.</div>
+    <div class="card">Your presence feels like home.</div>
+    <div class="card">Your heart is rare and beautiful.</div>
+  </div>
+</section>
+
+<section>
+  <h2>What You Mean To Me</h2>
+  <p>
+    You make life gentler.  
+    You make happiness quieter and deeper.  
+    You make love feel effortless.
+  </p>
+  <div class="heart">💗</div>
+</section>
+
+<section>
+  <h2>One Last Thing</h2>
+  <p>I wrote something only for you.</p>
+  <button onclick="openLetter()">Open Love Letter 💌</button>
+</section>
+
+<section>
+  <h2>Always You</h2>
+  <p>And yes… this world is brighter with you in it.</p>
+  <button onclick="startFireworks()">Celebrate 🎆</button>
+</section>
+
+<section>
+  <footer>Made with endless love — only for Shreya 💖</footer>
+</section>
+
+</div>
+
+<!-- Love Letter -->
+<div class="letter" id="letter">
+  <div class="letter-box">
+    <h2>My Dearest Shreya</h2>
     <p>
-      This little corner of the internet exists for just one reason —  
-      to remind you how special you are to me.
+      I don’t know when it happened, but somehow you became my favorite
+      thought, my safest place, and my quiet happiness.  
+      Loving you feels natural — like breathing, like belonging.
     </p>
-    <div class="scroll">scroll down ↓</div>
-  </section>
+    <div class="close" onclick="closeLetter()">tap to close</div>
+  </div>
+</div>
 
-  <!-- Section 2 -->
-  <section>
-    <h2>About You</h2>
-    <div class="cards">
-      <div class="card">Your smile feels like home.</div>
-      <div class="card">Your presence makes everything calmer.</div>
-      <div class="card">You are effortlessly beautiful — inside and out.</div>
-    </div>
-  </section>
+<script>
+/* Floating hearts */
+for(let i=0;i<40;i++){
+  let h=document.createElement('div');
+  h.className='float';
+  h.innerText='💖';
+  h.style.left=Math.random()*100+'vw';
+  h.style.animationDuration=6+Math.random()*10+'s';
+  document.body.appendChild(h);
+}
 
-  <!-- Section 3 -->
-  <section>
-    <h2>What You Mean to Me</h2>
-    <p>
-      With you, even the ordinary moments feel special.  
-      You make laughter easier, silence warmer, and life softer.
-    </p>
-  </section>
+/* Love letter */
+function openLetter(){document.getElementById('letter').classList.add('open')}
+function closeLetter(){document.getElementById('letter').classList.remove('open')}
 
-  <!-- Section 4 -->
-  <section>
-    <h2>A Small Promise</h2>
-    <p>
-      I promise to choose you — in happiness, in chaos,  
-      in every version of tomorrow.
-    </p>
-    <div class="heart">💗</div>
-  </section>
+/* Fireworks */
+const canvas=document.getElementById('fireworks');
+const ctx=canvas.getContext('2d');
+canvas.width=innerWidth;
+canvas.height=innerHeight;
 
-  <!-- Footer -->
-  <footer>
-    Made with ❤️ only for Shreya
-  </footer>
+let particles=[];
+function startFireworks(){
+  for(let i=0;i<120;i++){
+    particles.push({
+      x:innerWidth/2,
+      y:innerHeight/2,
+      r:Math.random()*2+1,
+      vx:(Math.random()-.5)*8,
+      vy:(Math.random()-.5)*8,
+      life:100
+    });
+  }
+}
+
+function animate(){
+  ctx.clearRect(0,0,canvas.width,canvas.height);
+  particles.forEach((p,i)=>{
+    p.x+=p.vx;
+    p.y+=p.vy;
+    p.life--;
+    ctx.fillStyle='rgba(255,255,255,.8)';
+    ctx.beginPath();
+    ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
+    ctx.fill();
+    if(p.life<=0)particles.splice(i,1);
+  });
+  requestAnimationFrame(animate);
+}
+animate();
+</script>
 
 </body>
 </html>
-
