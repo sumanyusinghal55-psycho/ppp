@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Shreya ❤️</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #ffd6e0, #fbc2eb);
+      min-height: 100vh;
+      overflow-x: hidden;
+      color: #2b2b2b;
+    }
+
+    section {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3.2rem;
+      margin-bottom: 15px;
+      animation: fadeUp 1.5s ease forwards;
+    }
+
+    h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.2rem;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 1.1rem;
+      max-width: 650px;
+      line-height: 1.8;
+      opacity: 0;
+      animation: fadeUp 1.8s ease forwards;
+      animation-delay: .4s;
+    }
+
+    .heart {
+      font-size: 3.5rem;
+      margin: 20px 0;
+      animation: heartbeat 1.2s infinite;
+    }
+
+    .scroll {
+      margin-top: 30px;
+      font-size: .9rem;
+      opacity: .7;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.65);
+      backdrop-filter: blur(8px);
+      padding: 25px;
+      border-radius: 20px;
+      box-shadow: 0 15px 40px rgba(0,0,0,.1);
+      margin: 15px;
+      max-width: 320px;
+      animation: fadeUp 1.5s ease forwards;
+    }
+
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    footer {
+      padding: 30px 10px;
+      text-align: center;
+      font-size: .9rem;
+      opacity: .8;
+    }
+
+    /* Animations */
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes heartbeat {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.25); }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Section 1 -->
+  <section>
+    <h1>Shreya ✨</h1>
+    <div class="heart">❤️</div>
+    <p>
+      This little corner of the internet exists for just one reason —  
+      to remind you how special you are to me.
+    </p>
+    <div class="scroll">scroll down ↓</div>
+  </section>
+
+  <!-- Section 2 -->
+  <section>
+    <h2>About You</h2>
+    <div class="cards">
+      <div class="card">Your smile feels like home.</div>
+      <div class="card">Your presence makes everything calmer.</div>
+      <div class="card">You are effortlessly beautiful — inside and out.</div>
+    </div>
+  </section>
+
+  <!-- Section 3 -->
+  <section>
+    <h2>What You Mean to Me</h2>
+    <p>
+      With you, even the ordinary moments feel special.  
+      You make laughter easier, silence warmer, and life softer.
+    </p>
+  </section>
+
+  <!-- Section 4 -->
+  <section>
+    <h2>A Small Promise</h2>
+    <p>
+      I promise to choose you — in happiness, in chaos,  
+      in every version of tomorrow.
+    </p>
+    <div class="heart">💗</div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    Made with ❤️ only for Shreya
+  </footer>
+
+</body>
+</html>
+
